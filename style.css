@@ -1,0 +1,151 @@
+/* ---------------ROOT VARIABLES------------------ */
+:root {
+  /* COLORS */
+  --blue: #4e54c8;
+  --white: #fff;
+  --black: #000;
+  --gray: #6c757d;
+  --light: #eeefef;
+  --dark: #7c7c7c;
+
+  /* TRANSITON */
+  --transition: all 350ms ease;
+
+  /*FONT-SIZE*/
+  --title: clamp(2.5rem, 5vw, 3.5rem) ;
+  --fs1: clamp(1.8rem, 2.5vw, 2.25rem);
+  --fs2: clamp(1.25rem, 2vw , 1.75rem);
+  --fs3: clamp(1rem, 1.7vw, 1.3rem);
+  --fs4: clamp(0.9rem, 1.7vw, 1.2rem);
+  --fs5: clamp(0.75rem, .2vw, .85rem);
+}
+/* --------------------------------- */
+/* ---------------GENERALS------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  background: var(--black);
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  object-fit: cover;
+  background-position: center;
+  font-size: 120%;
+}
+
+.card {
+  background: var(--black);
+  opacity: .8;
+  color: var(--white);
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 450px;
+  margin: 1em;
+  border: 2px solid var(--white);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: rgba(124, 124, 124, 0.25);
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border: 1px solid var(--white);
+
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: rgba(124, 124, 124, 0.5);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+  border: 1px solid var(--white);
+}
+
+button:hover {
+  background: rgba(124, 124, 124, 0.42);
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 1.25rem;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: var(--white);
+  position: absolute;
+  top: 0;
+  left: 1.25rem;
+}
+
+.sub-contianer {
+  margin-bottom: 1rem;
+}
+
+.icon,
+.wind-icon,
+.humidity-icon {
+  margin-right: 10px;
+}
+
+.humidity-icon {
+  width: 45px;
+}
+
+.wind-icon {
+  transform: rotate(-30deg);
+  width: 35px;
+  fill: var(--white);
+  stroke: var(--black);
+}
